@@ -286,6 +286,13 @@ footer{
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .field-error{
+    border: 1px solid crimson;
+  }
+.thank-you{
+    display: none;
+}
 /*Media query starts*/
 
 /* On screens that are 600px wide or less */

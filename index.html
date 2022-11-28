@@ -421,46 +421,47 @@
             <div class="col-6">
                 <div class="shadow p-3 mb-5 bg-white rounded">
                     <h4 class="mb-3"> <strong>Schedule a demo</strong></h4>
-                    <form class="needs-validation" novalidate="">
+                    <form class="needs-validation form" novalidate="">
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <input type="text" class="form-control" id="firstName" placeholder="First Name*"
-                                    value="" required="">
+                                    value="" required name="first_name">
                                 <div class="invalid-feedback"> Valid first name is required. </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <input type="text" class="form-control" id="lastName" placeholder="Last Name*" value=""
-                                    required="">
+                                    required name="last_name">
                                 <div class="invalid-feedback"> Valid last name is required. </div>
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="input-group">
                                 <input type="text" class="form-control" id="email" placeholder="Company Email*"
-                                    required="">
+                                    required name="email">
                                 <div class="invalid-feedback" style="width: 100%;"> Your email is required.
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-3 mb-3">
-                                <input type="text" class="form-control" id="telcode" placeholder="India(+91)" value="">
+                                <input type="text" class="form-control" id="telcode" placeholder="India(+91)" value="91" name="telcode">
                             </div>
                             <div class="col-md-9 mb-3">
                                 <input type="text" class="form-control" id="phone" placeholder="Phone Number*" value=""
-                                    required="">
+                                    required name="phone">
                                 <div class="invalid-feedback"> Valid phone number is required. </div>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="address" placeholder="How can we help you?">
+                            <input type="text" class="form-control" id="address" placeholder="How can we help you?" name="how_help">
                         </div>
                         <div class="mb-3">
                             <input type="text" class="form-control" id="address2"
-                                placeholder="How soon do you want to be get Started?">
+                                placeholder="How soon do you want to be get Started?" name="when">
                         </div>
                         <div class="ContactSubmitbtn">
-                            <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                            <button class="btn btn-primary btn-lg btn-block" type="submit" id="form-btn">Submit</button>
+                            <p class="thank-you text-success">Thank You. We will contact you shortly.</p>
                         </div>
                     </form>
                 </div>
