@@ -2,7 +2,7 @@
 
 
 // Add Event Listner to Close Btn
-document.querySelector('#form-btn').addEventListener("click", () => formSubmit());
+document.querySelector('#form-btn').addEventListener("click", (e) => formSubmit(e));
 
 
 
@@ -38,7 +38,9 @@ function validateContactForm(form) {
     return valid;
 }
 
-function formSubmit() {
+function formSubmit(e) {
+    e.preventDefault();
+
     let form = document.querySelector('.form');
 
     try {
