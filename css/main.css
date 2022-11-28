@@ -1,40 +1,143 @@
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* reset end */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
 :root {
     --text-content-color: #2783C5;
     --bodyimage: url('../assets/images/BodyCurle.png');
+    --gutter: 2.5rem;
 }
+
 
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    font-family: sofia-pro, sans-serif;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-
-.logo {
-    max-width: 8.2em;
+h1,h2,h3{
+    /* font-family: 'sofia-pro', sans-serif; */
 }
 
-.hire {
-    background-image: url('../assets/icons/hireline.png');
-    background-repeat: no-repeat;
-    background-position: left bottom;
-}
-
-.bodyimg {
-    background-image: var(--bodyimage);
-    background-repeat: no-repeat;
-}
-
-header {
-    background-position: right top -16em;
-}
-
-.headerContent {
+.navbar-top {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 1.5rem 3.75rem 0 3.75rem;
+}
+
+
+#section1 {
+    padding-block: 12.5rem;
+    padding-left: 3.75rem;
+    width: 100vw;
+    position: relative;
+    z-index: 5;
+    display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.headerContent{
+    backdrop-filter: blur(2px);
+}
+
+.body-img {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    padding: 0;
+    object-fit: contain;
 }
 
 nav {
@@ -45,54 +148,116 @@ nav {
     height: 2em;
 }
 
-.section2 h4 {
+#section1 h4 {
     color: #ffa500;
     font-weight: bold;
     font-size: 30px;
 }
 
-.section2 .subheading {
-    color: #3931af;
-    font-size: 20px;
+#section1 .subheading {
+    color: #3B3B3B;
+    font-size: 22px;
+    width: 40ch;
 }
 
-.body-img {
-    text-align: right;
+.text-secondary {
+    width: 48ch;
+    color: #707070;
 }
 
-.section2 {
+
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    line-height: 0;
+    padding: 1.25em 1.5em;
+    border: none;
+    color: #FFFFFF;
+}
+
+.btn-nav{
+    background-color: #2E6BB3;
+}
+
+.logo {
+    width: clamp(2.5rem, 8rem, 8.75rem);
+}
+
+.hire {
+    background-image: url('../assets/icons/hireline.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+
+
+.heading-area{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-inline: auto;
+    margin-block: 5rem;
+    gap: 2rem;
+}
+
+.heading-area h2{
+
+}
+
+.heading-area p{
+    width: clamp(70ch,100%,80ch);
+
+}
+
+.headerContent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card{
+    display: flex;
+    max-width: max-content;
     align-items: center;
 }
 
-.Sub_section2 {
+.card-grid{
+    margin-inline: 3.75rem;
     display: flex;
-    justify-content: space-evenly;
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+    /* flex-wrap: wrap; */
 }
 
-.card2 {
-    background: #F2F7FC 0% 0% no-repeat padding-box;
+.card-body{
     display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 4.5em 1.5rem;
+    background-color: #F4F4F4;
+    border-radius: 10px;
+    max-height: max-content;
+}
+
+.card-col{
     flex-direction: column;
 }
 
-.card1 {
-    display: flex;
-    flex-direction: row;
+.card-col img{
+    margin-top: -2rem;
 }
 
-.overlaydivcard1 {
-    background: #F4F4F4 0% 0% no-repeat padding-box;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 65%;
-    position: absolute;
-    display: flex;
+.card-col .card-body{
+    background-color: #F2F7FC;
 }
-
 .alignCenter {
     display: flex;
     align-items: center;
@@ -192,13 +357,13 @@ nav {
     padding: 2em 23em 0em 4em;
 }
 
-.section6sub{
+.section6sub {
     display: flex;
     flex-direction: row;
     background-position: right -27em top -16em;
 }
 
-.leftrightpad3{
+.leftrightpad3 {
     padding: 0em 3em;
 }
 
@@ -206,34 +371,35 @@ nav {
     list-style: none;
     line-height: 3em;
 }
-#section7 ul li:before 
-{
+
+#section7 ul li:before {
     color: #fff;
     background-color: #2783C5;
-     content: '✓'; 
-     margin-right: 2.5em; 
-     padding:0px 3px;
-     border-radius:20px;
-     font-size:10px;
-} 
-
-#section7{
-    padding:2em;
+    content: '✓';
+    margin-right: 2.5em;
+    padding: 0px 3px;
+    border-radius: 20px;
+    font-size: 10px;
 }
 
-#section7 h1{
+#section7 {
+    padding: 2em;
+}
+
+#section7 h1 {
     padding: 0em 7em 0em 0.8em;
 }
 
-footer{
+footer {
     color: #959595;
 }
+
 .ContactSubmitbtn {
     display: flex;
     justify-content: center;
 }
 
-.footericonstyle{
+.footericonstyle {
     font-size: 1em;
 }
 
@@ -242,22 +408,23 @@ footer{
     border-radius: 60px;
     box-shadow: 0 0 2px #959595;
     padding: 0.5em 0.6em;
-    margin:0em 3em 1em 0em;
-  }
+    margin: 0em 3em 1em 0em;
+}
 
-  .footteralign{
+.footteralign {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     align-items: flex-start;
     padding: 0em 3em;
-  }
+}
 
-  .coprightdiv{
+.coprightdiv {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
+}
+
 /*Media query starts*/
 
 /* On screens that are 600px wide or less */
@@ -287,6 +454,7 @@ footer{
     .sidenav a {
         font-size: 18px;
     }
+
     .headerContent {
         padding: 0em 2em;
     }
@@ -300,17 +468,3 @@ footer{
     }
 }
 
-
-/*Media query ends*/
-
-/* bootstrap class updated start */
-.card {
-    border: 0px solid rgba(0, 0, 0, .125);
-    margin: 5% 0%;
-}
-
-.card-body {
-    padding: 6% 0%;
-}
-
-/* bootstrap class updated end */
