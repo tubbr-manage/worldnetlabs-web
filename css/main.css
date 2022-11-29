@@ -10,25 +10,25 @@ body {
     font-family: sofia-pro, sans-serif;
 }
 
-#section1{
+#section1 {
     padding-inline: 3.75rem;
 }
 
-.section2{
+.section2 {
     margin-left: 3.75rem;
 }
 
-#section3 .harea{
+#section3 .harea {
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-#section3 .container{
+#section3 .container {
     display: flex;
     align-content: center;
-    
+
 }
 
 .logo {
@@ -154,7 +154,7 @@ nav {
     color: #000;
 }
 
-.sidenav a > *{
+.sidenav a>* {
     pointer-events: none;
 }
 
@@ -166,7 +166,7 @@ nav {
     background: rgb(26, 7, 237)
 }
 
-.bottomlist{
+.bottomlist {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -174,7 +174,9 @@ nav {
     padding-left: 0;
 }
 
-.tab-info{display: none;}
+.tab-info {
+    display: none;
+}
 
 .subsection5 {
     display: flex;
@@ -220,13 +222,13 @@ nav {
     padding: 2em 23em 0em 4em;
 }
 
-.section6sub{
+.section6sub {
     display: flex;
     flex-direction: row;
     background-position: right -27em top -16em;
 }
 
-.leftrightpad3{
+.leftrightpad3 {
     padding: 0em 3em;
 }
 
@@ -234,34 +236,35 @@ nav {
     list-style: none;
     line-height: 3em;
 }
-#section7 ul li:before 
-{
+
+#section7 ul li:before {
     color: #fff;
     background-color: #2783C5;
-     content: '✓'; 
-     margin-right: 2.5em; 
-     padding:0px 3px;
-     border-radius:20px;
-     font-size:10px;
-} 
-
-#section7{
-    padding:2em;
+    content: '✓';
+    margin-right: 2.5em;
+    padding: 0px 3px;
+    border-radius: 20px;
+    font-size: 10px;
 }
 
-#section7 h1{
+#section7 {
+    padding: 2em;
+}
+
+#section7 h1 {
     padding: 0em 7em 0em 0.8em;
 }
 
-footer{
+footer {
     color: #959595;
 }
+
 .ContactSubmitbtn {
     display: flex;
     justify-content: center;
 }
 
-.footericonstyle{
+.footericonstyle {
     font-size: 1em;
 }
 
@@ -270,29 +273,31 @@ footer{
     border-radius: 60px;
     box-shadow: 0 0 2px #959595;
     padding: 0.5em 0.6em;
-    margin:0em 3em 1em 0em;
-  }
+    margin: 0em 3em 1em 0em;
+}
 
-  .footteralign{
+.footteralign {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     align-items: flex-start;
     padding: 0em 3em;
-  }
+}
 
-  .coprightdiv{
+.coprightdiv {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
+}
 
-  .field-error{
+.field-error {
     border: 1px solid crimson;
-  }
-.thank-you{
+}
+
+.thank-you {
     display: none;
 }
+
 /*Media query starts*/
 
 /* On screens that are 600px wide or less */
@@ -322,6 +327,7 @@ footer{
     .sidenav a {
         font-size: 18px;
     }
+
     .headerContent {
         padding: 0em 2em;
     }
