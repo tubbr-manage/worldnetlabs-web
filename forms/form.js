@@ -24,15 +24,15 @@ function validateContactForm(form) {
         valid = false;
     }
     if (form.phone.value == "") {
-        form.message.classList.add('field-error');
+        form.phone.classList.add('field-error');
         valid = false;
     }
     if (form.how_help.value == "") {
-        form.message.classList.add('field-error');
+        form.how_help.classList.add('field-error');
         valid = false;
     }
     if (form.when.value == "") {
-        form.message.classList.add('field-error');
+        form.when.classList.add('field-error');
         valid = false;
     }
     return valid;
